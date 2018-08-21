@@ -1,0 +1,59 @@
+1.
+#include<stdio.h>
+#include<stdlib.h>
+struct sumofnatural
+{
+    int n;
+    int array[1000];
+    int sum;
+};
+
+struct sumofnatural input()
+{
+    struct sumofnatural a;
+    printf("ENTER THE NUMBER OF ELEMENTS TO ADDED");
+    scanf("%d",&a.n);
+    printf("ENTER THE ELEMENTS");
+    for(int i=0;i<a.n;i++)
+    {
+        scanf("%d",&a.array[i]);
+    }
+    return a;
+}
+
+struct sumofnatural compute(struct sumofnatural a)
+{
+    int i;
+    a.sum=0;
+    for(i=0;i<a.n;i++)
+    {
+        a.sum= a.sum+a.array[i];
+    }
+    return a;
+}
+
+void output(struct sumofnatural a)
+{
+    printf("THE SUM OF %d NUMBERS GIVEN IS %d",a.n,a.sum);
+}
+
+int main()
+{
+    struct sumofnatural a;
+    a=input();
+    a=compute(a);
+    output(a);
+    return 0;
+}
+
+output:
+ENTER THE NUMBER OF ELEMENTS TO ADDED5                                                                                           
+ENTER THE ELEMENTS1                                                                                                              
+2                                                                                                                                
+3                                                                                                                                
+4                                                                                                                                
+5                                                                                                                                
+THE SUM OF 5 NUMBERS GIVEN IS 15 
+
+*****************************************************************************************************
+2.
