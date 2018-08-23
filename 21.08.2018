@@ -57,3 +57,83 @@ THE SUM OF 5 NUMBERS GIVEN IS 15
 
 *****************************************************************************************************
 2.
+
+struct number input()
+{
+ struct number n;
+ printf("ENTER THE NUMBER OF ELEMENTS WHICH ARE NEEDED TO TAKE INPUT");
+ scanf("%d",&n.a);
+ printf("ENTER THE ELEMENTS");
+ for(int i=0;i<n.a;i++)
+ {
+  scanf("%d",&n.array[i]);
+ }
+ return n;
+}
+
+***************************************************************************************************
+3.
+
+#include <stdio.h>
+#include <math.h>
+struct sosq
+{
+    int n;
+    float array[100];
+    float sum;
+};
+
+struct sosq input()
+{
+    struct sosq p;
+    int i;
+    printf("HOW MANY SQUARES ARE TAKEN AS INPUTS?\n");
+    scanf("%d",&p.n);
+    printf("ENTER THE SQUARES\n");
+    for(i=0;i<p.n;i++)
+    {
+        scanf("%f",&p.array[i]);
+    }
+    return p;
+}
+
+struct sosq compute(struct sosq p)
+{
+    int k;
+    p.sum=0;
+    for(k=0;k<p.n;k++)
+    {
+        p.sum=p.sum+sqrt(p.array[k]);
+    }
+    return p;
+}
+
+void output(struct sosq p)
+{
+    printf("\nTHE SUM OF ALL SQUAREROOT OF THE GIVEN NUMBER IS %f\n",p.sum);
+}
+
+int main()
+{
+    struct sosq p;
+    p=input();
+    p=compute(p);
+    output(p);
+    return 0;
+}
+
+
+output:
+HOW MANY SQUARES ARE TAKEN AS INPUTS?                                                                                          
+5                                                                                                                              
+ENTER THE SQUARES                                                                                                              
+1                                                                                                                              
+4                                                                                                                              
+9                                                                                                                              
+16                                                                                                                             
+25                                                                                                                             
+                                                                                                                               
+THE SUM OF ALL SQUAREROOT OF THE GIVEN NUMBER IS 15.000000
+
+*******************************************************************************************************************
+
