@@ -136,4 +136,29 @@ ENTER THE SQUARES
 THE SUM OF ALL SQUAREROOT OF THE GIVEN NUMBER IS 15.000000
 
 *******************************************************************************************************************
+4.
+#include <stdio.h>
+struct sequence
+{
+  int array[100];
+  int small;
+  int lesser;
+  int size;
+}
+
+struct sequence input()
+{
+    struct sequence s;
+    int i;
+    printf("ENTER THE SIZE OF ARRAY");
+    scanf("%d",&s.size);
+    printf("\nENTER THE ARRAY ELEMENTS");
+    for(i=0;i<s.size;i++)
+    {
+        scanf("%d",s.array[i]);
+    }
+    return s;
+}
+
+
 
