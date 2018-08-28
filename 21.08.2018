@@ -188,3 +188,19 @@ int main()
     return 0;
 }
 
+
+
+
+output:
+ENTER THE SIZE OF ARRAY                                                                                                          
+5                                                                                                                                
+                                                                                                                                 
+ENTER THE ARRAY ELEMENTS                                                                                                         
+8                                                                                                                                
+9                                                                                                                                
+56                                                                                                                               
+28                                                                                                                               
+1                                                                                                                                
+                                                                                                                                 
+THE SMALLEST ELEMENT IN THE ARRAY IS :1   
+
