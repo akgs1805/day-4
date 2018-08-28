@@ -178,3 +178,13 @@ void output(struct sequence s)
 {
     printf("THE SMALLEST ELEMENT IN THE ARRAY IS :%d",s.lesser);
 }
+
+int main()
+{
+    struct sequence s;
+    s=input();
+    s=compute(s);
+    output(s);
+    return 0;
+}
+
