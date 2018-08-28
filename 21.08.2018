@@ -160,5 +160,17 @@ struct sequence input()
     return s;
 }
 
-
+struct sequence compute(struct sequence s)
+{
+    int a=0;
+    s.lesser=s.array[a];
+    for(int i=1;i<s.size;i++)
+    {
+        if(s.lesser<s.array[i])
+        {
+            s.lesser=s.array[i];
+        }
+    }
+    return s;
+}
 
