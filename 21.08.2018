@@ -230,4 +230,26 @@ struct sequence input()
 }
 
 
+struct sequence compute(struct sequence s)
+{
+    int a=0,j;
+    s.lesser=s.array[a];
+    s.smlesser=s.array[a+1];
+    for(int i=1;i<s.size;i++)
+    {
+        if(s.lesser>s.array[i])
+        {
+            s.lesser=s.array[i];
+        }
+    }
+    for(int j=2;j<s.size;j++)
+    {
+        if(s.smlesser>s.array[j])
+        {
+            s.smlesser=s.array[j];
+        }
+    }
+    return s;
+}
+
 
