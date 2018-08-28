@@ -203,4 +203,31 @@ ENTER THE ARRAY ELEMENTS
 1                                                                                                                                
                                                                                                                                  
 THE SMALLEST ELEMENT IN THE ARRAY IS :1   
+********************************************************************************************************************************
+5.
+#include <stdio.h>
+struct sequence
+{
+  int array[100];
+  int small;
+  int lesser;
+  int smlesser;
+  int size;
+};
+
+struct sequence input()
+{
+    struct sequence s;
+    int i;
+    printf("ENTER THE SIZE OF ARRAY\n");
+    scanf("%d",&s.size);
+    printf("\nENTER THE ARRAY ELEMENTS\n");
+    for(i=0;i<s.size;i++)
+    {
+        scanf("%d",&s.array[i]);
+    }
+    return s;
+}
+
+
 
