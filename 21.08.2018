@@ -244,6 +244,8 @@ struct sequence compute(struct sequence s)
     }
     for(int j=2;j<s.size;j++)
     {
+        if(s.lesser==s.array[j])
+         break;
         if(s.smlesser>s.array[j])
         {
             s.smlesser=s.array[j];
@@ -253,7 +255,8 @@ struct sequence compute(struct sequence s)
 }
 void output(struct sequence s)
 {
-    printf("THE SMALLEST ELEMENT IN THE ARRAY IS :%d",s.lesser);
+    printf("THE SMALLEST ELEMENT IN THE ARRAY IS :%d\n",s.lesser);
+    printf("THE SECOND SMALLEST ELEMENT IN THE ARRAY IS :%d",s.smlesser);
 }
 
 int main()
@@ -264,6 +267,5 @@ int main()
     output(s);
     return 0;
 }
-
 
 
